@@ -44,8 +44,8 @@ layers:
   - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
   - NUMBER
-  - {t: '$$mdi:keyboard-return$$', h: FN}
-  - {t: '$$mdi:keyboard-space$$', h: FN}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - FN
   - $$mdi:apple-keyboard-option$$
   NUMBER:
@@ -142,9 +142,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: LGUI, h: '$$mdi:gesture-tap-hold$$'}
   - SYMBOL
-  - {t: LGUI, type: held}
-  - {type: held alternate}
-  - {type: held alternate}
+  - LGUI
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '`', s: '~'}
@@ -190,8 +190,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {type: held}
   - {type: held alternate}
   - {type: held alternate}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
