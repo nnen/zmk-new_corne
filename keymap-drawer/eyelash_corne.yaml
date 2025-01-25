@@ -127,7 +127,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - '&m0'
   - '&m1'
