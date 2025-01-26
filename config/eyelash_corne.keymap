@@ -61,6 +61,13 @@
             bindings = <&kp LS(W) &kp N5 &kp D &kp LS(I) &kp N1 &kp LS(U) &kp LS(V) &kp O>;
             label = "M1";
         };
+
+        member_op: member_op {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "MEMBER_OP";
+        };
     };
 
     keymap {
@@ -83,7 +90,7 @@
             bindings = <
 &trans    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                                     &mmv MOVE_UP                     &trans         &kp N7  &kp N8  &kp N9  &kp BACKSPACE  &kp LC(BSPC)
 &trans    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans         &kp N4  &kp N5  &kp N6  &kp N0         &trans
-&kp CAPS  &kp F11  &kp F12  &trans  &trans  &kp PRINTSCREEN  &trans                    &mmv MOVE_DOWN                   &trans         &kp N1  &kp N2  &kp N3  &kp DOT        &trans
+&kp CAPS  &kp F11  &kp F12  &trans  &trans  &kp PRINTSCREEN  &trans                    &mmv MOVE_DOWN                   &trans         &kp N1  &kp N2  &kp N3  &kp DOT        &caps_word
                             &trans  &trans  &trans                                                                      &kp LS(UNDER)  &mo 3   &trans
             >;
 
@@ -95,7 +102,7 @@
             bindings = <
 &kp LC(LA(DELETE))  &bt BT_CLR_ALL   &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &kp C_POWER                            &mmv MOVE_UP                     &trans    &kp PAGE_DOWN  &kp PAGE_UP   &trans     &kp DELETE  &kp PRINTSCREEN
 &none               &none            &none       &none       &none       &sys_reset             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans      &kp INS
-&trans              &rgb_ug RGB_TOG  &trans      &m0         &m1         &kp C_SLEEP  &trans                    &mmv MOVE_DOWN                   &trans    &kp HOME       &kp END       &trans     &trans      &trans
+&kp CAPSLOCK        &rgb_ug RGB_TOG  &trans      &m0         &m1         &kp C_SLEEP  &trans                    &mmv MOVE_DOWN                   &trans    &kp HOME       &kp END       &trans     &trans      &trans
                                                  &sk LGUI    &mo 3       &kp LGUI                                                                &trans    &trans         &trans
             >;
 
@@ -107,7 +114,7 @@
             bindings = <
 &kp GRAVE    &kp EXCL   &kp AT                &kp HASH          &kp DLLR        &kp PRCNT                                &mmv MOVE_UP                     &kp CARET         &kp AMPS              &kp ASTRK          &kp MINUS              &kp EQUAL  &kp BSLH
 &kp TILDE    &trans     &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GREATER_THAN  &kp RIGHT_BRACE       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp SEMI   &trans
-&bootloader  &kp MINUS  &kp PLUS              &kp ASTERISK      &kp SLASH       &kp EQUAL      &trans                    &mmv MOVE_DOWN                   &trans            &kp NON_US_BACKSLASH  &kp PIPE           &kp AMPERSAND          &trans     &bootloader
+&bootloader  &kp MINUS  &kp PLUS              &kp ASTERISK      &kp SLASH       &kp EQUAL      &trans                    &mmv MOVE_DOWN                   &member_op        &kp NON_US_BACKSLASH  &kp PIPE           &kp AMPERSAND          &trans     &bootloader
                                               &trans            &trans          &trans                                                                    &trans            &trans                &trans
             >;
 
